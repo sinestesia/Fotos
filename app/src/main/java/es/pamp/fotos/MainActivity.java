@@ -27,12 +27,12 @@ import java.util.Date;
 public class MainActivity extends AppCompatActivity {
     static final int REQUEST_IMAGE_CAPTURE =1;
     Intent i = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-    ImageView imageview = (ImageView) findViewById(R.id.imageView);
+    ImageView imageview;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        imageview = (ImageView) findViewById(R.id.imageView);
 
         Button fotoBoton =(Button) findViewById(R.id.fotoBoton);
         fotoBoton.setOnClickListener(new View.OnClickListener() {
